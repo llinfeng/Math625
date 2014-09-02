@@ -1,0 +1,313 @@
+\documentclass[11pt]{article}
+\usepackage[left=.7in,right=.7in,top=.7in,bottom=.7in]{geometry}
+%Set up the margins
+\usepackage{amssymb,amsmath,amsthm,mathrsfs,verbatim}
+\usepackage{extarrows}%% For extending the equal sign when there is   \xlongequal{<stuff>}
+%\sout{} strike through!
+\usepackage{marginnote}%\marginnote{}
+\usepackage[colorlinks,linkcolor=blue]{hyperref}
+
+%Create a header at the top of every page
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\usepackage{pdfpages} %merge pdf with: \includepdfmerge{heine-borel_proof.pdf,-}
+\usepackage{graphicx}%to input images \includegraphics[width=130mm]{Open_Open}
+\usepackage{lipsum}
+\usepackage{color}
+
+%You can define commands for the things you use frequently.
+\newcommand{\al}{\aleph}
+\newcommand{\A}{\mathcal{A}}
+\newcommand{\D}{\mathcal D}
+\renewcommand{\c}{\mathfrak c}
+\newcommand{\C}{{\mathbb C}}
+\renewcommand{\L}{{\mathcal L}}
+\newcommand{\M}{\mathcal M}
+\newcommand{\N}{{\mathbb N}}
+\renewcommand{\P}{\mathcal {P}}
+\newcommand{\Q}{{\mathbb Q}}
+\newcommand{\R}{{\mathbb R}}
+\newcommand{\X}{{\mathlarger{\mathcal X}}}
+\newcommand{\Z}{{\mathbb Z}}
+\newcommand{\To}{\Rightarrow}
+\newcommand{\WLOG}{With out loss of generality}
+\newcommand{\card}{\text{card }}
+
+% The limits.
+\newcommand{\limk}{\underset{k\to\infty}\lim}
+\newcommand{\limn}{\underset{n\to\infty}\lim}
+\newcommand{\liminfn}{\underset{n\to\infty}{\underline{\lim}}}
+\newcommand{\liminfk}{\underset{k\to\infty}{\underline{\lim}}}
+\newcommand{\liminfp}{\underset{p\to\infty}{\underline{\lim}}}
+\newcommand{\liminfj}{\underset{j\to\infty}{\underline{\lim}}}
+\newcommand{\limsupn}{\underset{n\to\infty}{\overline{\lim}}}
+\newcommand{\limsupk}{\underset{k\to\infty}{\overline{\lim}}}
+\newcommand{\limsupp}{\underset{p\to\infty}{\overline{\lim}}}
+\newcommand{\limsupr}{\underset{r\to\infty}{\overline{\lim}}}
+
+
+\newcommand{\sgn}{\text{sgn}}
+
+% For L^p space
+\newcommand{\Linfty}{{L^\infty(E)}}
+\newcommand{\Lp}{{L^{p}(E)}}
+\newcommand{\Lq}{{L^{q}(E)}}
+
+% 偷懒
+\renewcommand{\phi}{\varphi}
+\renewcommand{\epsilon}{\varepsilon}
+
+
+\usepackage{mdframed}%needed for box like theorems.\newmdtheoremenv %In the box, the footnotes are more handy! ^.^
+
+\newtheorem{theorem}{Theorem}[subsection]
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newmdtheoremenv{claimbox}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newmdtheoremenv{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newmdtheoremenv{definition}[theorem]{Definition}
+\newtheorem*{defn}{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{fact}[theorem]{fact}
+\newmdtheoremenv{idea}[theorem]{Idea}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{question}[theorem]{Question}
+\newmdtheoremenv{question_sqrt}{Question}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem*{problem}{\textcolor[rgb]{1.00,0.00,0.00}{Problem}}
+\newtheorem{remark}[theorem]{Remark}
+\newmdtheoremenv{remark_box}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newmdtheoremenv{setup}{Set Up}
+\newmdtheoremenv{joke}{Joke}
+\newmdtheoremenv{typo}{Typo Correction}
+\newtheorem*{rudin}{Rudin Says}
+%Textbook: elementary  : the theory of calculus
+\title{Math 625\\
+Professor Erhan Bayraktar}
+\author{Linfeng Li \\ llinfeng@umich.edu}
+
+\usepackage{mathrsfs} % enable people to use \mathscr{A}
+\usepackage{color}
+\usepackage{xcolor}
+\newcommand{\hilight}[1]{\colorbox{yellow}{#1}}
+\usepackage{bbm}
+\usepackage{relsize} % For large symbles: \mathlarger{math_expression}
+\usepackage{marvosym} % 笑脸
+%\usepackage{enumitem} % For using: \begin{itemize}[leftmargin=-.5in]
+\usepackage{enumerate}
+%\usepackage{comment}
+
+% To make footnote numering by section.
+\makeatletter
+\@addtoreset{footnote}{section}
+\makeatother
+\usepackage{colonequals}
+\begin{document}
+\maketitle
+\section{Week 1}
+\subsection{Tue: 2014-09-02}
+\subsubsection{Basics}
+Exam (in class, 90 minutes): Tue, Oct 7; Tue, Nov 11; Tue, Dec 9.   || 25\%, 30
+\% and 40 \%.  
+5\% attendance. 
+
+
+\textbf{Textbook: } Probability and Statistics (took the class from the writer,
+available through library).  
+Probability with \textbf{Martingale}, the latter is the emphasis.
+
+\textbf{Exercises:} Book has exercises, but not graded homework.
+
+\subsubsection{Beginning: measure theory}
+\paragraph{Sigma-algebra}
+Given a set $E$ (a universal set), $\mathcal E$, a nonempty collection of
+subsets of $E$, is called a $\sigma$-algebra if closed under complements \&
+countable unions. 
+
+\begin{itemize}
+  \item The most trivial sigma-algebra  $\{\emptyset, E\}$ is called the trivial
+$\sigma$-algebra. 
+\end{itemize}
+
+\begin{definition}[$\sigma$ algebra generated by $\mathcal C$]
+  Given a collection $\mathcal C$ of subsets (of $E$), $\sigma(\mathcal C)$ will
+  denote the smaller $\sigma$-algebra containing $\mathcal C$. 
+\end{definition}
+
+\begin{definition}
+  $\sigma$-algebra generated by open sets  is called \textbf{Borel
+  $\sigma$-algebra}.
+\end{definition}
+
+\paragraph{$p$-system} A collection of $\mathcal C$ which is closed under
+(finite) intersection.
+
+``p'' for product, could also use $\pi$-system. The latter in Greek. 
+\paragraph{$d$-system} A collection $\mathcal D$ is called a $d$-system if 
+\begin{enumerate}[(i)]
+  \item $E\in \mathcal D$, 
+  \item $A, B \in \mathcal D$, $A\supset B$ $\implies$ $A\setminus B \in \mathcal D$
+  \item $\left( A_n \right) \subset \mathcal D$ and $A_n \uparrow A$ $\implies$
+    $A\subset \mathcal D$. 
+\end{enumerate}
+(``d'' for Dynkin)
+
+
+
+
+Note: curly characters are for collection of sets. 
+\begin{proposition}
+  $\mathcal E$ is a $\sigma$-algebra if and only if it is a $p$-system and a
+  $d$-system. 
+% A sigma algebra is both a $p$-system and a $d$ system.
+  \begin{proof}
+    $\Rightarrow$ is trivial.
+
+    $\Leftarrow$: Let $\mathcal E$ be a collection which is a $p$-system and a
+    $d$-system. 
+    \begin{enumerate}
+      \item Closed under complements (to be a sigma algebra).
+        Let $A\in  \mathcal E$ $\implies$ $E\setminus A \in \mathcal E$ by
+        $(ii)$ for property of $d$-system. 
+      \item Closed under finite unions: $A, B \in \mathcal E$ $\implies$
+        $A\bigcup B = \left( A^c \cap B^c \right)^c$ by $1$ above and property
+        of $p$-system.
+      \item Closed under countable unions: for $\left( A_n \right) \subset
+        \mathcal E$, $\bigcup _n A_n \in \mathcal E$? We construct an
+        increasing sequence of $\left( B_n \right)$: 
+
+        Let $B_1 = A_1$, $B_2 = A_1 \bigcup A_2 \in \mathcal E$ \dots
+        $\bigcup _ n A_n = \bigcup _ n B_n $. Then by $(iii)$ for property of
+        $d$-system, the conclusion follows.
+    \end{enumerate}
+  \end{proof}
+  
+\end{proposition}
+
+\begin{lemma}
+  For $\mathcal D$, a $d$-system, fix $D\in \mathcal D$. Define $\hat { \mathcal D}
+  := \left\{ A \in \mathcal D : A\cap D \in \mathcal D \right\}$. Then, $\hat
+  {\mathcal D} $ is also a $d$-system.
+  \label{hw:homework-week1}
+\end{lemma}
+
+\paragraph{Monotone Class Theorem}
+[Very useful tool in showing an arbitrary collection of sets is a $\sigma$-algebra]
+
+\begin{theorem}
+  If a $d$-system contains a $p$-system, then it also contains the
+  $\sigma$-algebra generated by the $p$-system.
+  \label{thm:monotone-class-theorem}
+  \begin{proof}
+    Symbolic expression: $\mathcal C \subset \mathcal D \implies \sigma
+    (\mathcal C) \subset \mathcal D$.
+
+    \textbf{Step 1: }
+
+
+    Let $\mathcal C$ be a $p$-system. $\mathcal D$ is the smallest $d$-system
+    that contains $\mathcal C$. 
+    \footnote{(***: little result -- the intersections of
+    $d$-systems is a $d$-system [to obtain the ``smallest'']. Also, the
+  ``smallest'' matters.)}
+
+    Enough to show $\mathcal D \supset \sigma (\mathcal C)$. 
+
+    If fact, we will show $\mathcal D$ is a $\sigma$-algebra. By proposition, it
+    is enough to show it is a $p$-system. 
+
+    \textbf{Step 2: }
+
+    Fix $B \in \mathcal C$ and let $\mathcal D_1 := \left\{ A \in \mathcal D : A
+    \bigcap B \in \mathcal D\right\}$. 1) By the lemma \ref{hw:homework-week1},
+    $\mathcal D_1$ is a $d$-system. 2) $\mathcal C \subset \mathcal D_1$. 
+
+    1) and 2) $\implies $ $\mathcal D_1 = \mathcal D$.
+
+
+    \textbf{Setp 3: }
+
+    Fix $A\in \mathcal D$, let $\mathcal D_2 := \left\{ B \in \mathcal D :
+    B\bigcap A \in \mathcal D \right\}$. 
+
+    1) by the lemma, $\mathcal D_2$ is a $d$-system. 2) by \textbf{step 2},
+    $\mathcal C \subset D_2$. 
+
+    1) and 2) $\implies$ $\mathcal D_2 = \mathcal D$. 
+
+
+
+    \textbf{Step 1-3} gives that $\mathcal D$ is a $p$-system.
+
+
+
+
+    In here, $\mathcal D = \sigma ( \mathcal C)$. [But in the theorem, this is
+    not a necessary conclusion.]
+  \end{proof}
+\end{theorem}
+
+\paragraph{Measurable space }
+$(E, \mathcal E)$ is a measurable space. [$\mathcal E$ is a $\sigma$-algebra on
+$E$.]
+
+\paragraph{Products of measure spaces} $(E, \mathcal E)$, $(F, \mathcal F)$.
+Then $\left( E \times F, \mathcal E light-product \mathcal F \right)$ where
+$\times$ is regular set product; and the light-product is $\sigma \left( \text{
+generated by measurable rectangles} 
+\right)$
+
+\paragraph{Measurable functions (random variables)}
+
+\begin{lemma}
+  A mapping $f: E\to F$ and (inverse mapping) $f^{-1} (A) := \left\{ x \in E :
+    f(x) \in A
+  \right\}.$ Then, $f^{-1} \emptyset = \emptyset$. $f^{-1}(F) = E$. $f^{-1}
+  (B\setminus C) = f^{-1} (B) \setminus f^{-1} (C)$. 
+  $f^{-1}\left( \bigcup _ i B_i \right) = \bigcup _i f^{-1}(B_i)$ and $f^{-1}\left( \bigcap B_i \right) =
+  \bigcap _ i f^{-1}\left( B_i \right)$.
+
+
+  (set operation passes through the inverse function operation.)
+  \label{lemma:measurable-function}
+\end{lemma}
+
+
+\begin{definition}
+  $(E, \mathcal E)$, $(F, \mathcal F)$. $f: E\to F$ is "measurable" relative to
+  $\mathcal E \& \mathcal F$ if $f^{-1}(B) \in \mathcal E$, $\forall B \in
+  \mathcal F$. 
+\end{definition}
+
+
+
+
+\end{document} 
+\substack 
+cmiless  <-- the Physics PhD student at Umich.
+
+\hrule
+\smallskip
+\hruleSince
+
+$\ddot\smile$ %Smiling Face
+$ \lfloor \rfloor$ %Tilman's special braces.
+
+
+\hrule
+\smallskip
+\hruleSince
+
+$\ddot\smile$ %Smiling Face
+$ \lfloor \rfloor$ %Tilman's special braces.
