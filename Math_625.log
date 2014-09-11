@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.6.22)  4 SEP 2014 11:41
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.6.22)  11 SEP 2014 11:26
 entering extended mode
 **Math_625.tex
 (C:\Users\Linfeng\Dropbox\Umich\625_Math\Note\Math_625.tex
@@ -735,8 +735,8 @@ Package mdframed Info: mdframed detected package amsthm
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 289.
-Package mdframed Info: Not enough space on this page on input line 293.
+(mdframed)              on input line 290.
+Package mdframed Info: Not enough space on this page on input line 294.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -745,12 +745,12 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [2]
-Package mdframed Info: Not enough space on this page on input line 293.
+Package mdframed Info: Not enough space on this page on input line 294.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 368.
+(mdframed)              on input line 369.
 
-Overfull \hbox (61.41148pt too wide) detected at line 388
+Overfull \hbox (61.41148pt too wide) detected at line 389
 \OT1/cmr/m/n/10.95 1[] \OMS/cmsy/m/n/10.95 2 M\OML/cmm/m/it/10.95 ;  \OMS/cmsy/
 m/n/10.95 8\OML/cmm/m/it/10.95 A \OMS/cmsy/m/n/10.95 2 C  \OT1/cmr/m/n/10.95 =[
 ]\OMS/cmsy/m/n/10.95 )  M[]
@@ -765,10 +765,10 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 [3]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 420.
+(mdframed)              on input line 421.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 458.
+(mdframed)              on input line 459.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -777,8 +777,6 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [4]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 515.
-
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
@@ -786,22 +784,74 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [5]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 515.
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[6]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[7]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[8]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[9]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[10]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[11]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1033.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[12]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1033.
  (C:\Users\Linfeng\Dropbox\Umich\625_Math\Note\Math_625.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 515.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 515.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1033.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1033.
+
 Package rerunfilecheck Info: File `Math_625.out' has not changed.
-(rerunfilecheck)             Checksum: AB3A5DC67D0337FC8A454F89AA1F7E63;334.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 515.
+(rerunfilecheck)             Checksum: E22895137201BE2A44355507DFAC2711;1448.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1033.
  ) 
 Here is how much of TeX's memory you used:
- 14862 strings out of 493706
- 247423 string characters out of 3144577
- 438379 words of memory out of 3000000
- 17955 multiletter control sequences out of 15000+200000
+ 14956 strings out of 493706
+ 248627 string characters out of 3144577
+ 438763 words of memory out of 3000000
+ 17978 multiletter control sequences out of 15000+200000
  16289 words of font info for 63 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 40i,12n,43p,10397b,465s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 40i,12n,43p,10397b,490s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Pr
 ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Fi
 les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Program Files/Mi
@@ -818,11 +868,12 @@ nts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
 public/amsfonts/cm/cmsl10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/a
 msfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
 cm/cmsy6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.
-pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/
-Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Math_625.pdf (5 pages, 255416 bytes).
+pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/P
+rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program F
+iles/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on Math_625.pdf (12 pages, 322202 bytes).
 PDF statistics:
- 191 PDF objects out of 1000 (max. 8388607)
- 59 named destinations out of 1000 (max. 500000)
- 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 347 PDF objects out of 1000 (max. 8388607)
+ 130 named destinations out of 1000 (max. 500000)
+ 153 words of extra memory for PDF output out of 10000 (max. 10000000)
 
